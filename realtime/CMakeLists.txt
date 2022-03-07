@@ -136,8 +136,7 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/realtime_ctrl_node.cpp)
-add_executable(run src/run.cpp)
-#add_executable(robot_control src/robot_control.cpp)
+add_executable(robot_control src/robot_control.cpp)
 #add_executable(vision_control src/vision_control.cpp)
 
 ## Rename C++ executable without prefix
@@ -154,10 +153,8 @@ add_executable(run src/run.cpp)
 # target_link_libraries(${PROJECT_NAME}_node
 #   ${catkin_LIBRARIES}
 # )
-target_link_libraries(vision_control ${catkin_LIBRARIES})
-target_link_libraries(run ${catkin_LIBRARIES})
+#target_link_libraries(vision_control ${catkin_LIBRARIES})
 target_link_libraries(robot_control ${catkin_LIBRARIES})
-target_link_libraries(run robot_control vision_control)
 
 #############
 ## Install ##
